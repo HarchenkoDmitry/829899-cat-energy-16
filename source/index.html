@@ -3,20 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
-    <header class="page-header">
+    <header class="page-header page-header--no-js">
       <span class="page-header__logo">
-        <img src="logo.svg" alt="Cat Energy" class="page-header__logo-img">
-        <b>Cat</b> Energy
+        <img src="img/logo-mobile.svg" alt="Cat Energy" class="page-header__logo-img" width="191" height="38">
       </span>
       <nav class="page-header__nav">
-        <button type="button" class="page-header__menu-switch">Меню</button>
+        <button type="button" class="page-header__menu-switch"><span class="page-header__btn-stick">Меню</span></button>
         <ul class="page-header__nav-list">
-          <li><span class="page-header__nav-link">Главная</span></li>
-          <li><a href="catalog.html" class="page-header__nav-link">Каталог продукции</a></li>
-          <li><a href="form.html" class="page-header__nav-link">Подбор программы</a></li>
+          <li class="page-header__nav-item"><span class="page-header__nav-link">Главная</span></li>
+          <li class="page-header__nav-item"><a href="catalog.html" class="page-header__nav-link">Каталог продукции</a></li>
+          <li class="page-header__nav-item"><a href="form.html" class="page-header__nav-link">Подбор программы</a></li>
         </ul>
       </nav>
     </header>
@@ -25,25 +26,27 @@
       <h1 class="visually-hidden">Cat Energy - Питание для котов</h1>
 
       <section class="promo">
-        <h2 class="promo__header general-heading">Функциональное питание для котов</h2>
-        <p class="promo__text">Занялся собой? Займись котом!</p>
-        <a href="#" class="button">Подобрать программу</a>
-        <img src="promo.png" width="33" height="38" alt="Cat Energy с курицей">
+        <div class="promo__wrap container">
+          <h2 class="promo__header general-heading">Функциональное питание для котов</h2>
+          <p class="promo__text">Занялся собой? Займись котом!</p>
+          <a href="#" class="promo__button button">Подобрать программу</a>
+          <img class="promo__img" src="img/index-can-mobile@1x.png" width="280" height="70" alt="Cat Energy с курицей">
+        </div>
       </section>
 
-      <section class="nutrition-program">
+      <section class="nutrition-program container">
         <h2 class="visually-hidden">Программы питания</h2>
 
         <article class="nutrition-program__item">
           <h3 class="nutrition-program__heading">Похудение</h3>
           <p class="nutrition-program__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-          <a href="#" class="nutrition-program__link">Католог SLIM</a>
+          <a href="#" class="nutrition-program__link">Каталог SLIM</a>
         </article>
 
         <article class="nutrition-program__item">
           <h3 class="nutrition-program__heading">Набор массы</h3>
           <p class="nutrition-program__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-          <a href="#" class="nutrition-program__link">Католог PRO</a>
+          <a href="#" class="nutrition-program__link">Каталог PRO</a>
         </article>
 
       </section>
@@ -104,6 +107,8 @@
       </ul>
       <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__link-academy">HTML Academy <img src="logo-htmlacademy.svg" alt="HTML Academy" width="27" height="35" class="page-footer__img-academy"></a>
     </footer>
+
+    <script src="js/main.js"></script>
 
   </body>
 </html>
