@@ -1,0 +1,126 @@
+.live-example {
+  display: flex;
+  overflow-x: hidden;
+  flex-direction: column;
+  padding-bottom: 35px;
+  background-color: #f2f2f2;
+}
+
+.live-example__heading {
+  margin-bottom: 35px;
+}
+
+.live-example__table {
+  position: relative;
+  width: 344px;
+  margin-top: 25px;
+  margin-bottom: 35px;
+  margin-left: 50%;
+  border-spacing: 32px 0;
+  transform: translateX(-50%);
+}
+
+.live-example__table-row:last-of-type {
+  position: absolute;
+  bottom: -15px;
+  display: flex;
+  justify-content: space-between;
+  width: 280px;
+}
+
+.live-example__table-value {
+  font-family: @font;
+  font-size: 24px;
+  box-sizing: border-box;
+  width: 124px;
+  padding: 10px;
+  padding-bottom: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  border: solid 1px #cdcdcd;
+  border-radius: 3px;
+}
+
+.live-example__table-heading {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1;
+  display: block;
+  width: 57px;
+  margin: 0 19px;
+  padding: 0 15px;
+  text-transform: lowercase;
+  background-color: #f2f2f2;
+}
+
+.live-example__cost {
+  font-family: @font;
+  text-align: center;
+  text-transform: uppercase;
+}
+.live-example__slider-img {
+  width: 320px;
+  margin-top: 21px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.live-example__img-wrap {
+  position: relative;
+  display: flex;
+}
+
+.live-example__img-before-wrap {
+  overflow: hidden;
+  width: 320px;
+  height: 240px;
+}
+
+.live-example__img-before {
+  max-width: none;
+  background-color: #f2f2f2;
+}
+
+.live-example__img-after {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.live-example__slider {
+  font-family: @font;
+  width: 320px;
+  margin-top: 33px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.live-example__slider-text {
+  font-size: 16px;
+  margin-right: 10px;
+  margin-left: 14px;
+}
+
+@media screen and (max-width: @mobile-width-only) {
+  .live-example__slider-field {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 84px;
+    height: 14px;
+    margin-left: 5px;
+    padding: 3px 4px;
+    vertical-align: baseline;
+    border: solid 1px #cdcdcd;
+    border-radius: 6px;
+    background-color: #fff;
+  }
+
+  .live-example__slider-switch {
+    width: 50%;
+    height: 100%;
+    border-radius: 3px;
+    background-color: #68b738;
+  }
+}
