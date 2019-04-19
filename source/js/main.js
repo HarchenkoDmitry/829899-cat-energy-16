@@ -13,11 +13,17 @@ function  initializationMenu() {
 
   headerContainer.classList.remove("page-header--no-js");
 
-  menuList.style.maxHeight = menuList.scrollHeight + "px";
   headerContainer.classList.add("page-header--close");
+  menuList.style.height = 0 + "px";
 
   btnMenu.addEventListener("click", function() {
-    headerContainer.classList.toggle("page-header--close");
+    if (headerContainer.classList.contains("page-header--close")) {
+      headerContainer.classList.remove("page-header--close");
+      menuList.style.height = menuList.scrollHeight + "px";
+    } else {
+      headerContainer.classList.add("page-header--close");
+      menuList.style.height = 0 + "px";
+    }
   });
 }
 
