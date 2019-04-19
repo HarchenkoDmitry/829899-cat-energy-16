@@ -2,6 +2,8 @@ window.onload = function() {
 
   initializationMenu();
 
+  initializationSlider();
+
 }
 
 function  initializationMenu() {
@@ -17,4 +19,35 @@ function  initializationMenu() {
   btnMenu.addEventListener("click", function() {
     headerContainer.classList.toggle("page-header--close");
   });
+}
+
+function initializationSlider() {
+  var sliderField = document.querySelector(".live-example__slider-field");
+  var slider = document.querySelector(".live-example__slider-switch");
+  var imgWrap = document.querySelector(".live-example__img-before-wrap");
+  var btnText = document.querySelectorAll(".live-example__slider-text");
+
+  ['touchmove', 'touchstart'].forEach(function(e) {
+    sliderField.addEventListener(e, function(evt) {
+      var coord = (evt.changedTouches[0].pageX - this.getBoundingClientRect().x) / this.getBoundingClientRect().width * 100;
+      if (coord <= 0) {
+        coord = 0;
+      } else if (coord >= 100) {
+        coord = 100;
+      }
+      slider.style.width = coord + "%";
+      imgWrap.style.width = coord + "%";
+    });
+  });
+
+  btnText[0].addEventListener("click", function() {
+    slider.style.width = 0 + "%";
+    imgWrap.style.width = 0 + "%";
+  });
+
+  btnText[1].addEventListener("click", function() {
+    slider.style.width = 100 + "%";
+    imgWrap.style.width = 100 + "%";
+  });
+
 }

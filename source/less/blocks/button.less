@@ -1,9 +1,11 @@
 .button {
   font-family: @font;
-  font-size: 14px;
+  font-size: 16px;
   color: #fff;
   display: block;
-  padding: 11px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
   transition: .2s;
   text-align: center;
   text-decoration: none;
@@ -14,5 +16,16 @@
   }
   &:active {
     color: rgba(255, 255, 255, .3);
+  }
+}
+
+.button--grey {
+  background-color: #f2f2f2;
+  color: #000;
+  &:hover {
+    background-color: #ebebeb;
+  }
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
   }
 }
