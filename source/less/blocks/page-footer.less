@@ -9,10 +9,11 @@
 
 a.page-footer__logo {
   &:hover {
-    opacity: .8;
+    opacity: 0.8;
   }
+
   &:active {
-    opacity: .6;
+    opacity: 0.6;
   }
 }
 
@@ -22,11 +23,9 @@ a.page-footer__logo {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 0;
   margin: 27px 0;
   margin-right: 11px;
   margin-bottom: 19px;
-  padding: 0;
   padding: 4px 0;
   padding-bottom: 1px;
   list-style: none;
@@ -38,12 +37,13 @@ a.page-footer__logo {
   font-size: 0;
   display: block;
   margin: 19px;
-  transition: .2s;
+  transition: 0.2s;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+
   &:active {
-    opacity: .3;
+    opacity: 0.3;
   }
 }
 
@@ -52,10 +52,12 @@ a.page-footer__logo {
     width: 22px;
     height: 12px;
     background-image: url("../img/icon-vk.svg");
+
     &::before {
       content: "";
       background-image: url("../img/icon-vk--green.svg");
     }
+
     &:hover {
       background-image: url("../img/icon-vk--green.svg");
     }
@@ -64,10 +66,12 @@ a.page-footer__logo {
     width: 18px;
     height: 16px;
     background-image: url("../img/icon-insta.svg");
+
     &::before {
       content: "";
       background-image: url("../img/icon-insta--green.svg");
     }
+
     &:hover {
       background-image: url("../img/icon-insta--green.svg");
     }
@@ -76,10 +80,12 @@ a.page-footer__logo {
     width: 10px;
     height: 19px;
     background-image: url("../img/icon-fb.svg");
+
     &::before {
       content: "";
       background-image: url("../img/icon-fb--green.svg");
     }
+
     &:hover {
       background-image: url("../img/icon-fb--green.svg");
     }
@@ -94,9 +100,10 @@ a.page-footer__logo {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  transition: .2s;
+  transition: 0.2s;
   text-decoration: none;
-  letter-spacing: -.3px;
+  letter-spacing: -0.3px;
+
   &::before {
     content: "";
     position: absolute;
@@ -104,17 +111,19 @@ a.page-footer__logo {
     right: 0;
     width: 27px;
     height: 100%;
-    transition: .2s;
+    transition: 0.2s;
     opacity: 0;
     background-image: url("../img/htmlacademy--green.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
   }
+
   &:hover::before {
     opacity: 1;
   }
+
   &:active {
-    opacity: .3;
+    opacity: 0.3;
   }
 }

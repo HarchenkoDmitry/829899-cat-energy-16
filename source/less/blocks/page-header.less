@@ -13,10 +13,11 @@
 
 a.page-header__logo {
   &:hover {
-    opacity: .8;
+    opacity: 0.8;
   }
+
   &:active {
-    opacity: .6;
+    opacity: 0.6;
   }
 }
 
@@ -45,8 +46,9 @@ a.page-header__logo {
   width: 24px;
   height: 2px;
   margin: auto;
-  transition-delay: .2s;
+  transition-delay: 0.2s;
   background-color: transparent;
+
   &::after,
   &::before {
     content: "";
@@ -55,13 +57,15 @@ a.page-header__logo {
     display: block;
     width: 24px;
     height: 2px;
-    transition: top .2s, transform .2s .3s;
+    transition: top 0.2s, transform 0.2s 0.3s;
     transform-origin: center;
-    background-color: #222;
+    background-color: #222222;
   }
+
   &::after {
     transform: rotate(-45deg);
   }
+
   &::before {
     transform: rotate(45deg);
   }
@@ -74,7 +78,7 @@ a.page-header__logo {
   margin: 0;
   padding: 0;
   list-style: none;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .page-header__nav-item {
@@ -86,10 +90,10 @@ a.page-header__logo {
   font-family: @font;
   font-size: 20px;
   font-weight: 500;
-  color: #111;
+  color: #111111;
   display: block;
   padding: 19px 0;
-  transition: .2s;
+  transition: 0.2s;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -97,10 +101,11 @@ a.page-header__logo {
 
 a.page-header__nav-link {
   &:hover {
-    opacity: .6;
+    opacity: 0.6;
   }
+
   &:active {
-    opacity: .3;
+    opacity: 0.3;
   }
 }
 
@@ -108,6 +113,7 @@ span.page-header__nav-link {
   position: relative;
   display: inline-block;
   cursor: default;
+
   &::after {
     content: "";
     position: absolute;
@@ -125,21 +131,26 @@ span.page-header__nav-link {
     .page-header__logo {
       margin-right: 0;
     }
+
     .page-header__menu-switch {
       display: none;
     }
   }
+
   .page-header--close {
     .page-header__btn-stick {
-      background-color: #222;
+      background-color: #222222;
+
       &::after,
       &::before {
-        transition: top .2s .3s, transform .2s;
+        transition: top 0.2s 0.3s, transform 0.2s;
         transform: rotate(0);
       }
+
       &::after {
         top: 8px;
       }
+
       &::before {
         top: -8px;
       }

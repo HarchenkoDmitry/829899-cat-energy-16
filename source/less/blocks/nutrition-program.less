@@ -15,10 +15,11 @@
   font-family: @font;
   font-size: 24px;
   font-weight: normal;
-  color: #111;
+  color: #111111;
   position: relative;
   margin-bottom: 16px;
   text-transform: uppercase;
+
   &::before {
     content: "";
     display: inline-block;
@@ -31,6 +32,7 @@
     border-radius: 50%;
     background-color: #68b738;
   }
+
   &::after {
     content: "";
     position: absolute;
@@ -60,14 +62,15 @@
 .nutrition-program__link {
   font-family: @font;
   font-size: 16px;
-  color: #111;
+  color: #111111;
   display: block;
   margin-top: 22px;
   padding: 18px 0;
-  transition: .2s;
+  transition: 0.2s;
   text-decoration: none;
   text-transform: uppercase;
   border-top: 1px solid #d9d9d9;
+
   &::after {
     content: "";
     display: inline-block;
@@ -75,20 +78,23 @@
     height: 11px;
     margin-bottom: 5px;
     margin-left: 11px;
-    transition: .2s;
+    transition: 0.2s;
     vertical-align: middle;
     background-image: url("../img/icon-right-arrow-verylong.svg");
     background-repeat: no-repeat;
     background-position: right;
     background-size: 33px 11px;
   }
+
   &:hover::after {
     width: 33px;
   }
+
   &:active {
     color: rgba(17, 17, 17, .3);
+
     &::after {
-      opacity: .3;
+      opacity: 0.3;
     }
   }
 }
