@@ -1,0 +1,28 @@
+.stylized-heading {
+  font-family: @font;
+  font-size: 24px;
+  font-weight: normal;
+  position: relative;
+  display: inline-block;
+  margin-top: 26px;
+  margin-bottom: 31px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 17px;
+    display: block;
+    width: 100vw;
+    height: 3px;
+    background-color: @color-green;
+  }
+
+  &::before {
+    left: calc(100% + 22px);
+  }
+
+  &::after {
+    right: calc(100% + 22px);
+  }
+}

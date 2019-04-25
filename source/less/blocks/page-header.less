@@ -1,0 +1,159 @@
+.page-header {
+  position: relative;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.page-header__logo {
+  display: flex;
+  align-items: center;
+  height: 65px;
+  margin-right: 89px;
+  transition: 0.2s;
+}
+
+a.page-header__logo {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.page-header__logo-img {
+  width: 191px;
+  height: 38px;
+  margin-left: 20px;
+}
+
+.page-header__menu-switch {
+  font-size: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 65px;
+  height: 65px;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.page-header__btn-stick {
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 2px;
+  margin: auto;
+  transition-delay: 0.2s;
+  background-color: transparent;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 24px;
+    height: 2px;
+    transition: top 0.2s, transform 0.2s 0.3s;
+    transform-origin: center;
+    background-color: #222222;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+}
+
+.page-header__nav-list {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transition: 0.4s;
+}
+
+.page-header__nav-item {
+  text-align: center;
+  border-top: 1px solid #e6e6e6;
+}
+
+.page-header__nav-link {
+  font-family: @font;
+  font-size: 20px;
+  font-weight: 500;
+  color: #111111;
+  display: block;
+  padding: 19px 0;
+  transition: 0.2s;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a.page-header__nav-link {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+span.page-header__nav-link {
+  position: relative;
+  display: inline-block;
+  cursor: default;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: @color-green;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .page-header--no-js {
+    .page-header__logo {
+      margin-right: 0;
+    }
+
+    .page-header__menu-switch {
+      display: none;
+    }
+  }
+
+  .page-header--close {
+    .page-header__btn-stick {
+      background-color: #222222;
+
+      &::after,
+      &::before {
+        transition: top 0.2s 0.3s, transform 0.2s;
+        transform: rotate(0);
+      }
+
+      &::after {
+        top: 8px;
+      }
+
+      &::before {
+        top: -8px;
+      }
+    }
+  }
+}
