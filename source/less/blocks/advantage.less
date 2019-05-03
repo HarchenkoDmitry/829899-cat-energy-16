@@ -1,5 +1,6 @@
 .advantage {
   margin-bottom: 32px;
+  overflow-x: initial;
 }
 
 .advantage__list {
@@ -15,47 +16,69 @@
   display: flex;
   align-items: center;
   margin: 10px 0;
-
-  &::before {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 60px;
-    margin-right: 20px;
-    background-color: @color-green;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 5px;
-    display: block;
-    width: 50px;
-    height: 60px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-  }
 }
 
-.advantage__item:nth-of-type(1)::after {
-  background-image: url("../img/advantage-leaf@1x.png");
+.advantage__img-wrap {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  background-color: @color-green;
 }
 
-.advantage__item:nth-of-type(2)::after {
-  background-image: url("../img/advantage-powder@1x.png");
-}
-
-.advantage__item:nth-of-type(3)::after {
-  background-image: url("../img/advantage-dining@1x.png");
-}
-
-.advantage__item:nth-of-type(4)::after {
-  background-image: url("../img/advantage-clock@1x.png");
+.advantage__img {
+  margin-left: 50%;
+  margin-top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .advantage__text {
   width: calc(100% - 80px);
   margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .advantage__heading {
+    margin-bottom: 0;
+  }
+
+  .advantage__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    counter-reset: myCounter;
+  }
+
+  .advantage__item {
+    width: 45.8%;
+    display: block;
+    margin-top: 72px;
+    margin-bottom: 61px;
+    position: relative;
+
+    &::after {
+      counter-increment: myCounter;
+      content:counter(myCounter);
+      position: absolute;
+      font-size: 281px;
+      color: #f2f2f2;
+      top: -39px;
+      right: 79px;
+      display: block;
+      min-width: 128px;
+      line-height: 1;
+      font-family: @font;
+    }
+  }
+
+  .advantage__img-wrap {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 32px;
+  }
+
+  .advantage__text {
+    font-size: 16px;
+    line-height: 1.5;
+    width: calc(100% - 70px);
+  }
 }
