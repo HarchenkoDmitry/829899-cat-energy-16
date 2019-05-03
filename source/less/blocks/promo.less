@@ -35,4 +35,54 @@
 .promo__img {
   width: 280px;
   margin: auto;
+  vertical-align: bottom;
+}
+
+@media (min-width: @tablet-width) {
+  .promo {
+    background: none;
+    color: #000000;
+    margin-top: 28px;
+    text-align: left;
+  }
+
+  .promo__wrap {
+    align-items: flex-start;
+  }
+
+  .promo__header {
+    margin-bottom: 21px;
+    padding: 0 87px;
+  }
+
+  .promo__text {
+    font-size: 20px;
+    padding: 0 87px;
+    margin-bottom: 20px;
+  }
+
+  .promo__wrap-img {
+    margin: auto;
+  }
+
+  .promo__img {
+    width: 709px;
+    height: 609px;
+  }
+
+  .promo__button {
+    order: 0;
+    display: inline-block;
+    width: auto;
+    margin: 0 87px;
+    margin-bottom: -52px;
+    position: relative;
+    font-size: 20px;
+    padding-left: 25px;
+    padding-right: 29px;
+    padding-top: 13px;
+    padding-bottom: 14px;
+    left: 2px;
+    top: 28px;
+  }
 }

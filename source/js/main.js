@@ -1,6 +1,10 @@
 window.onload = function() {
 
-  initializationMenu();
+
+  if (document.body.clientWidth < 768) {
+
+    initializationMenu();
+  }
 
   initializationSlider();
 
