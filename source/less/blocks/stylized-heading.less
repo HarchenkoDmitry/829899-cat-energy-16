@@ -4,26 +4,33 @@
   font-weight: normal;
   position: relative;
   display: inline-block;
+  padding: 0 22px;
+  margin-left: -22px;
   margin-top: 26px;
   margin-bottom: 31px;
   background-color: #ffffff;
 
-  &::before,
-  &::after {
+  &::before {
     content: "";
     position: absolute;
     top: 17px;
+    left: 2px;
     display: block;
     width: 100vw;
     height: 3px;
     background-color: @color-green;
+    z-index: -1;
   }
+}
 
-  &::before {
-    left: calc(100% + 22px);
+@media (min-width: @tablet-width) {
+  .stylized-heading::before {
+    left: -8px;
   }
+}
 
-  &::after {
-    right: calc(100% + 22px);
+@media (min-width: @desktop-width) {
+  .stylized-heading::before {
+    left: -18px;
   }
 }
