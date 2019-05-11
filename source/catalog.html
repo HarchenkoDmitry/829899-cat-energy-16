@@ -13,8 +13,9 @@
     </div>
 
     <header class="page-header page-header--no-js">
-      <a href="index.html" class="page-header__logo">
+      <a href="/" class="page-header__logo">
         <picture>
+          <source srcset="img/logo-desktop.svg" media="(min-width: 1300px)">
           <source srcset="img/logo-tablet.svg" media="(min-width: 768px)">
           <img src="img/logo-mobile.svg" alt="Cat Energy" class="page-header__logo-img" width="191" height="38">
         </picture>
@@ -22,7 +23,7 @@
       <nav class="page-header__nav">
         <button type="button" class="page-header__menu-switch"><span class="page-header__btn-stick">Меню</span></button>
         <ul class="page-header__nav-list">
-          <li class="page-header__nav-item"><a href="index.html" class="page-header__nav-link">Главная</a></li>
+          <li class="page-header__nav-item"><a href="/" class="page-header__nav-link">Главная</a></li>
           <li class="page-header__nav-item"><span class="page-header__nav-link">Каталог продукции</span></li>
           <li class="page-header__nav-item"><a href="form.html" class="page-header__nav-link">Подбор программы</a></li>
         </ul>
@@ -231,49 +232,61 @@
       </section>
 
       <section class="map">
-        <div class="map__wrap-text map__wrap-text--grey">
+        <div class="map__wrap-text container">
           <h3 class="map__heading">Приглашаем<br> к сотрудничеству дилеров!</h3>
-          <p class="map__text">ул. Большая Конюшенная, д. 19/8 <br>Санкт-Петербург</p>
+          <p class="map__text">
+            <span>ул. Большая Конюшенная, д. 19/8</span>
+            <br>
+            <span>Санкт-Петербург</span>
+          </p>
         </div>
-        <img src="img/map.jpg" width="320" height="400" alt="ул. Большая Конюшенная, д. 19/8" class="map__img">
+        <picture>
+          <source srcset="img/bg-map-desktop@1x.png" media="(min-width: 1300px)">
+          <source srcset="img/bg-map-tablet@1x.png" media="(min-width: 768px)">
+          <img src="img/bg-map-mobile@1x.png" width="320" height="400" alt="ул. Большая Конюшенная, д. 19/8" class="map__img">
+        </picture>
       </section>
 
     </main>
 
-    <footer class="page-footer container">
-      <span class="page-footer__logo"><img src="img/logo-footer.svg" alt="Cat Energy" width="128" height="24"></span>
-      <ul class="page-footer__social-list">
-        <li class="page-footer__social-item">
-          <a href="#" class="page-footer__social-link">
-            Мы в контакте
-            <svg width="22" height="12">
-              <use xlink:href="img/sprite.svg#icon-vk-mobile">
-            </svg>
-          </a>
-        </li>
-        <li class="page-footer__social-item">
-          <a href="#" class="page-footer__social-link">
-            Мы в instagram
-            <svg width="16" height="16">
-              <use xlink:href="img/sprite.svg#icon-insta-mobile">
-            </svg>
-          </a>
-        </li>
-        <li class="page-footer__social-item">
-          <a href="#" class="page-footer__social-link">
-            Мы в facebook
-            <svg width="10" height="19">
-              <use xlink:href="img/sprite.svg#icon-fb-mobile">
-            </svg>
-          </a>
-        </li>
-      </ul>
-      <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__link-academy">
-        HTML Academy
-        <svg width="27" height="34">
-          <use xlink:href="img/sprite.svg#icon-htmlacademy">
-        </svg>
-      </a>
+    <footer class="page-footer">
+      <div class="page-footer__wrap container">
+        <a href="/" class="page-footer__logo">
+          <img src="img/logo-footer.svg" class="page-footer__logo-img" alt="Cat Energy" width="128" height="24">
+        </a>
+        <ul class="page-footer__social-list">
+          <li class="page-footer__social-item">
+            <a href="#" class="page-footer__social-link">
+              Мы в контакте
+              <svg width="22" height="12">
+                <use xlink:href="#icon-vk-mobile">
+              </svg>
+            </a>
+          </li>
+          <li class="page-footer__social-item">
+            <a href="#" class="page-footer__social-link">
+              Мы в instagram
+              <svg width="16" height="16">
+                <use xlink:href="#icon-insta-mobile">
+              </svg>
+            </a>
+          </li>
+          <li class="page-footer__social-item">
+            <a href="#" class="page-footer__social-link">
+              Мы в facebook
+              <svg width="10" height="19">
+                <use xlink:href="#icon-fb-mobile">
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__link-academy">
+          HTML Academy
+          <svg width="27" height="40">
+            <use xlink:href="#icon-htmlacademy">
+          </svg>
+        </a>
+      </div>
     </footer>
 
     <script src="js/main.js"></script>
