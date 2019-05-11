@@ -12,9 +12,10 @@
       <include src="build/img/sprite.svg"></include>
     </div>
 
-    <header class="page-header page-header--no-js">
+    <header class="page-header page-header--no-js page-header--main">
       <span class="page-header__logo">
         <picture>
+          <source srcset="img/logo-desktop.svg" media="(min-width: 1300px)">
           <source srcset="img/logo-tablet.svg" media="(min-width: 768px)">
           <img src="img/logo-mobile.svg" alt="Cat Energy" class="page-header__logo-img" width="191" height="38">
         </picture>
@@ -38,7 +39,8 @@
           <p class="promo__text">Занялся собой? Займись котом!</p>
           <a href="#" class="promo__button button">Подобрать программу</a>
           <picture class="promo__wrap-img">
-            <source srcset="img/index-can-tablet%401x.jpg" media="(min-width: 768px)">
+            <source srcset="img/index-can-desktop@1x.png" media="(min-width: 1300px)">
+            <source srcset="img/index-can-tablet@1x.jpg" media="(min-width: 768px)">
             <img class="promo__img" src="img/index-can-mobile@1x.png" width="280" height="70" alt="Cat Energy с курицей">
           </picture>
         </div>
@@ -50,7 +52,7 @@
         <article class="nutrition-program__item">
           <div class="nutrition-program__wrpa-img">
             <svg class="nutrition-program__img" width="35" height="49">
-              <use xlink:href="img/sprite.svg#icon-cat-slim">
+              <use xlink:href="#icon-cat-slim">
             </svg>
           </div>
           <h3 class="nutrition-program__heading">Похудение</h3>
@@ -61,7 +63,7 @@
         <article class="nutrition-program__item">
           <div class="nutrition-program__wrpa-img">
             <svg class="nutrition-program__img" width="67" height="29">
-              <use xlink:href="img/sprite.svg#icon-cat-pro">
+              <use xlink:href="#icon-cat-pro">
             </svg>
           </div>
           <h3 class="nutrition-program__heading">Набор массы</h3>
@@ -101,8 +103,8 @@
         </ol>
       </section>
 
-      <section class="live-example container">
-        <div class="live-example__text-wrap">
+      <section class="live-example">
+        <div class="live-example__text-wrap container">
           <h2 class="live-example__heading general-heading">Живой пример</h2>
           <p class="live-example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
           <table class="live-example__table">
@@ -117,67 +119,87 @@
           </table>
           <p class="live-example__cost">Затраты на питание: <span class="live-example__price">15 000 руб.</span></p>
         </div>
-        <div class="live-example__slider-img">
-          <div class="live-example__img-wrap">
-            <div class="live-example__img-before-wrap">
-              <img src="img/before-mobile@1x.png" class="live-example__img-before" width="320" height="240" alt="Кот до питания Cat Energy">
-            </div>
-            <img src="img/after-mobile@1x.png" class="live-example__img-after" width="320" height="240" alt="Кот после питания Cat Energy">
+
+        <section class="slider">
+          <h3 class="visually-hidden">Что произойдет с вашим котом</h3>
+          <div class="slider__wrap">
+            <picture class="slider__img-wrap">
+              <source srcset="img/before-desktop@1x.png" media="(min-width: 1300px)">
+              <source srcset="img/before-tablet@1x.png" media="(min-width: 768px)">
+              <img src="img/before-mobile@1x.png" class="slider__img" width="320" height="240" alt="Кот до питания Cat Energy">
+            </picture>
+            <picture class="slider__img-wrap">
+              <source srcset="img/after-desktop@1x.png" media="(min-width: 1300px)">
+              <source srcset="img/after-tablet@1x.png" media="(min-width: 768px)">
+              <img src="img/after-mobile@1x.png" class="slider__img" width="320" height="240" alt="Кот после питания Cat Energy">
+            </picture>
           </div>
-          <div class="live-example__slider">
-            <span class="live-example__slider-text">Было</span>
-            <div class="live-example__slider-field">
-              <div class="live-example__slider-switch"></div>
+          <div class="slider__control">
+            <button type="button" class="slider__control-btn slider__control-btn--before">Было</button>
+            <div class="slider__control-field">
+              <div class="slider__control-slider"></div>
             </div>
-            <span class="live-example__slider-text">Стало</span>
+            <button type="button" class="slider__control-btn slider__control-btn--after">Стало</button>
           </div>
-        </div>
+        </section>
       </section>
 
       <section class="map">
-        <div class="map__wrap-text">
+        <div class="map__wrap-text container">
           <h3 class="map__heading">Приглашаем<br> к сотрудничеству дилеров!</h3>
-          <p class="map__text">ул. Большая Конюшенная, д. 19/8 <br>Санкт-Петербург</p>
+          <p class="map__text">
+            <span>ул. Большая Конюшенная, д. 19/8</span>
+            <br>
+            <span>Санкт-Петербург</span>
+          </p>
         </div>
-        <img src="img/map.jpg" width="320" height="400" alt="ул. Большая Конюшенная, д. 19/8" class="map__img">
+        <picture>
+          <source srcset="img/bg-map-desktop@1x.png" media="(min-width: 1300px)">
+          <source srcset="img/bg-map-tablet@1x.png" media="(min-width: 768px)">
+          <img src="img/bg-map-mobile@1x.png" width="320" height="400" alt="ул. Большая Конюшенная, д. 19/8" class="map__img">
+        </picture>
       </section>
 
     </main>
 
-    <footer class="page-footer container">
-      <span class="page-footer__logo"><img src="img/logo-footer.svg" alt="Cat Energy" width="128" height="24"></span>
-      <ul class="page-footer__social-list">
-        <li class="page-footer__social-item">
-          <a href="#" class="page-footer__social-link">
-            Мы в контакте
-            <svg width="22" height="12">
-              <use xlink:href="img/sprite.svg#icon-vk-mobile">
-            </svg>
-          </a>
-        </li>
-        <li class="page-footer__social-item">
-          <a href="#" class="page-footer__social-link">
-            Мы в instagram
-            <svg width="16" height="16">
-              <use xlink:href="img/sprite.svg#icon-insta-mobile">
-            </svg>
-          </a>
-        </li>
-        <li class="page-footer__social-item">
-          <a href="#" class="page-footer__social-link">
-            Мы в facebook
-            <svg width="10" height="19">
-              <use xlink:href="img/sprite.svg#icon-fb-mobile">
-            </svg>
-          </a>
-        </li>
-      </ul>
-      <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__link-academy">
-        HTML Academy
-        <svg width="27" height="34">
-          <use xlink:href="img/sprite.svg#icon-htmlacademy">
-        </svg>
-      </a>
+    <footer class="page-footer">
+      <div class="page-footer__wrap container">
+        <span class="page-footer__logo">
+          <img src="img/logo-footer.svg" class="page-footer__logo-img" alt="Cat Energy" width="128" height="24">
+        </span>
+        <ul class="page-footer__social-list">
+          <li class="page-footer__social-item">
+            <a href="#" class="page-footer__social-link">
+              Мы в контакте
+              <svg width="22" height="12">
+                <use xlink:href="#icon-vk-mobile">
+              </svg>
+            </a>
+          </li>
+          <li class="page-footer__social-item">
+            <a href="#" class="page-footer__social-link">
+              Мы в instagram
+              <svg width="16" height="16">
+                <use xlink:href="#icon-insta-mobile">
+              </svg>
+            </a>
+          </li>
+          <li class="page-footer__social-item">
+            <a href="#" class="page-footer__social-link">
+              Мы в facebook
+              <svg width="10" height="19">
+                <use xlink:href="#icon-fb-mobile">
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__link-academy">
+          HTML Academy
+          <svg width="27" height="40">
+            <use xlink:href="#icon-htmlacademy">
+          </svg>
+        </a>
+      </div>
     </footer>
 
     <script src="js/main.js"></script>

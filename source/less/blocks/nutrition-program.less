@@ -51,7 +51,8 @@
   color: #111111;
   display: block;
   margin-top: 22px;
-  padding: 18px 0;
+  padding-top: 17px;
+  padding-bottom: 19px;
   transition: 0.2s;
   text-decoration: none;
   text-transform: uppercase;
@@ -88,6 +89,7 @@
 @media (min-width: @tablet-width) {
   .nutrition-program {
     padding-top: 0;
+    margin-bottom: 45px;
   }
 
   .nutrition-program__item {
@@ -100,6 +102,28 @@
     padding-bottom: 41px;
   }
 
+  .nutrition-program__heading {
+    font-size: 36px;
+    margin-bottom: 5px;
+  }
+
+  .nutrition-program__text {
+    line-height: 1.5;
+    font-size: 16px;
+  }
+
+  .nutrition-program__link {
+    font-size: 20px;
+    border: none;
+    margin-top: 36px;
+
+    &::after {
+      margin-left: 23px;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
   .nutrition-program__item:nth-of-type(2) {
     padding-right: 311px;
 
@@ -121,24 +145,57 @@
     width: 140px;
     height: 194px;
   }
+}
+
+@media (min-width: @desktop-width) {
+  .nutrition-program {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 43px;
+  }
+
+  .nutrition-program__item {
+    width: calc(50% - 40px);
+    box-sizing: border-box;
+    padding: 0 50px;
+    padding-top: 48px;
+    padding-bottom: 41px;
+
+    &:nth-of-type(2n) {
+      margin-left: 80px;
+    }
+  }
+
+  .nutrition-program__wrpa-img {
+    width: 100px;
+    height: 100px;
+    vertical-align: top;
+  }
+
+  .nutrition-program__item:nth-of-type(1) .nutrition-program__img{
+    width: 70px;
+    height: 97px;
+  }
+
+  .nutrition-program__item:nth-of-type(2) .nutrition-program__img{
+    width: 134px;
+    height: 56px;
+  }
 
   .nutrition-program__heading {
-    font-size: 36px;
-    margin-bottom: 5px;
+    vertical-align: middle;
+    margin-left: 43px;
+    margin-top: 25px;
   }
 
   .nutrition-program__text {
-    line-height: 1.5;
-    font-size: 16px;
+    margin-top: 31px;
+    margin-left: 2px;
+    margin-bottom: 11px;
   }
 
   .nutrition-program__link {
-    font-size: 20px;
-    border: none;
-    margin-top: 36px;
-
-    &::after {
-      margin-left: 23px;
-    }
+    margin-top: 0;
+    margin-left: 2px;
   }
 }

@@ -2,7 +2,9 @@
   position: relative;
   z-index: 1;
   display: flex;
-  padding: 12px 19px;
+  padding: 0 19px;
+  padding-top: 12px;
+  padding-bottom: 10px;
   background-color: #ffffff;
 }
 
@@ -28,6 +30,58 @@
 
 .map__img {
   width: 100%;
+  margin: auto;
+  display: block;
   margin-top: -39px;
   vertical-align: bottom;
+}
+
+@media (min-width: @tablet-width) {
+  .map__wrap-text {
+    padding: 0 71px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 37px;
+  }
+
+  .map__heading {
+    font-size: 20px;
+    line-height: 1.25;
+    width: 200px;
+    margin-bottom: 18px;
+  }
+
+  .map__text {
+    text-align: right;
+    font-size: 16px;
+    width: 169px;
+    line-height: 1.25;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .map__img {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .map {
+    position: relative;
+  }
+
+  .map__wrap-text {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    width: 570px;
+    height: 201px;
+    padding: 46px 76px;
+  }
+
+  .map__text {
+    text-align: left;
+  }
 }

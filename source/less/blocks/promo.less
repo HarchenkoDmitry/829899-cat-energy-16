@@ -42,7 +42,7 @@
   .promo {
     background: none;
     color: #000000;
-    margin-top: 28px;
+    margin-top: 27px;
     text-align: left;
   }
 
@@ -57,7 +57,7 @@
 
   .promo__text {
     font-size: 20px;
-    padding: 0 87px;
+    padding: 0 88px;
     margin-bottom: 20px;
   }
 
@@ -84,5 +84,54 @@
     padding-bottom: 14px;
     left: 2px;
     top: 28px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo {
+    position: relative;
+    margin-top: 0;
+    padding-top: 196px;
+    padding-bottom: 188px;
+    margin-bottom: 79px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      width: calc(50% + 1px);
+      height: 100%;
+      background-image: url("../img/index-background-desktop@1x.jpg"),
+      linear-gradient(to bottom, #63a73a 305px, #ffffff 305px);
+      background-repeat: no-repeat;
+      background-position: top left;
+    }
+  }
+
+  .promo__header {
+    padding-left: 80px;
+    width: calc(50% - 150px);
+  }
+
+  .promo__text {
+    padding: 0;
+    padding-left: 80px;
+  }
+
+  .promo__button {
+    position: static;
+    margin: 0;
+    margin-left: 80px;
+    margin-top: 33px;
+  }
+
+  .promo__img {
+    position: absolute;
+    top: 142px;
+    left: calc(50% - 160px);
+    width: 552px;
+    height: 499px;
   }
 }
