@@ -2,3 +2,29 @@
   margin-top: 26px;
   margin-bottom: 41px;
 }
+
+@media (min-width: @tablet-width) {
+  .catalog__heading {
+    margin-top: 53px;
+    margin-bottom: 65px;
+    width: 100%;
+  }
+
+  .catalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow-x: hidden;
+    width: 768px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog {
+    width: auto;
+  }
+
+  .catalog__heading {
+    margin-top: 70px;
+  }
+}

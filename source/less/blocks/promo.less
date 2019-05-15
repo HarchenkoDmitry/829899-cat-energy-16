@@ -5,6 +5,11 @@
     linear-gradient(to bottom, #63a73a 305px, #ffffff 305px);
   background-repeat: no-repeat;
   background-position: top left;
+
+  &.webp {
+    background-image: url("../img/index-background-mobile@1x.webp"),
+      linear-gradient(to bottom, #63a73a 305px, #ffffff 305px);
+  }
 }
 
 .promo__wrap {
@@ -15,6 +20,7 @@
 .promo__header {
   margin-top: 26px;
   margin-bottom: 12px;
+  color: #ffffff;
 }
 
 .promo__text {
@@ -42,6 +48,11 @@
   .promo {
     background: no-repeat top left / 320px url("../img/index-background-mobile@2x.jpg"),
       linear-gradient(to bottom, #63a73a 305px, #ffffff 305px);
+
+    &.webp {
+      background-image: url("../img/index-background-mobile@2x.webp"),
+        linear-gradient(to bottom, #63a73a 305px, #ffffff 305px);
+    }
   }
 }
 
@@ -51,6 +62,10 @@
     color: #000000;
     margin-top: 27px;
     text-align: left;
+
+    &.webp {
+      background: none;
+    }
   }
 
   .promo__wrap {
@@ -60,6 +75,7 @@
   .promo__header {
     margin-bottom: 21px;
     padding: 0 87px;
+    color: #000000;
   }
 
   .promo__text {
@@ -111,9 +127,14 @@
       width: calc(50% + 1px);
       height: 100%;
       background-image: url("../img/index-background-desktop@1x.jpg"),
-      linear-gradient(to bottom, #64a93c 696px, #ffffff 696px);
+        linear-gradient(to bottom, #64a93c 696px, #ffffff 696px);
       background-repeat: no-repeat;
       background-position: top right;
+    }
+
+    &.webp::after {
+        background-image: url("../img/index-background-desktop@1x.webp"),
+          linear-gradient(to bottom, #64a93c 696px, #ffffff 696px);
     }
   }
 
@@ -121,6 +142,11 @@
     .promo::after {
       background: no-repeat top right / 720px url("../img/index-background-desktop@2x.jpg"),
         linear-gradient(to bottom, #64a93c 696px, #ffffff 696px);
+
+        &.webp::after {
+          background-image: url("../img/index-background-desktop@2x.webp"),
+            linear-gradient(to bottom, #64a93c 696px, #ffffff 696px);
+      }
     }
   }
 

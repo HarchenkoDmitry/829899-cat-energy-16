@@ -1,5 +1,6 @@
 .stylized-heading {
   font-family: @font;
+  color: #111111;
   font-size: 24px;
   font-weight: normal;
   position: relative;
@@ -15,8 +16,8 @@
     position: absolute;
     top: 17px;
     left: 2px;
-    display: block;
     width: 100vw;
+    display: block;
     height: 3px;
     background-color: @color-green;
     z-index: -1;
@@ -24,13 +25,27 @@
 }
 
 @media (min-width: @tablet-width) {
-  .stylized-heading::before {
-    left: -8px;
+  .stylized-heading {
+    font-size: 36px;
+    margin-top: 22px;
+    margin-left: -2px;
+    padding-left: 39px;
+    padding-right: 36px;
+
+    &::before {
+      left: -28px;
+      top: 27px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
-  .stylized-heading::before {
-    left: -18px;
+  .stylized-heading {
+    margin-left: -40px;
+    margin-top: 31px;
+
+    &::before {
+      left: calc((-100vw + 1300px) / 2);
+    }
   }
 }
