@@ -5,17 +5,18 @@
   font-weight: normal;
   position: relative;
   display: inline-block;
-  padding: 0 22px;
-  margin-left: -22px;
-  margin-top: 26px;
-  margin-bottom: 31px;
+  padding: 0 23px;
+  margin-left: -24px;
+  margin-top: 29px;
+  margin-bottom: 34px;
   background-color: #ffffff;
+  line-height: 1;
 
   &::before {
     content: "";
     position: absolute;
-    top: 17px;
-    left: 2px;
+    top: 14px;
+    left: 4px;
     width: 100vw;
     display: block;
     height: 3px;
@@ -27,14 +28,15 @@
 @media (min-width: @tablet-width) {
   .stylized-heading {
     font-size: 36px;
-    margin-top: 22px;
+    margin-top: 27px;
+    margin-bottom: 36px;
     margin-left: -2px;
     padding-left: 39px;
     padding-right: 36px;
 
     &::before {
       left: -28px;
-      top: 27px;
+      top: 22px;
     }
   }
 }
@@ -42,7 +44,8 @@
 @media (min-width: @desktop-width) {
   .stylized-heading {
     margin-left: -40px;
-    margin-top: 31px;
+    margin-top: 36px;
+    margin-bottom: 36px;
 
     &::before {
       left: calc((-100vw + 1300px) / 2);
