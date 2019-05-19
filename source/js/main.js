@@ -1,11 +1,6 @@
 window.onload = function() {
 
-
-
-
-
   if (document.body.clientWidth < 768) {
-
     initializationMenu();
   }
 
@@ -13,9 +8,8 @@ window.onload = function() {
     initializationSlider();
   }
 
+  validationForm();
 }
-
-
 
 function initializationMenu() {
   var headerContainer = document.querySelector(".page-header");
@@ -23,7 +17,6 @@ function initializationMenu() {
   var menuList = document.querySelector(".page-header__nav-list")
 
   headerContainer.classList.remove("page-header--no-js");
-
   headerContainer.classList.add("page-header--close");
   menuList.style.height = 0 + "px";
 
@@ -105,4 +98,49 @@ function initializationSlider() {
     slideBefore.style.width = 100 - width + "%";
     slideAfter.style.width = width + "%";
   }
+}
+
+
+function validationForm() {
+  var form = document.querySelector(".program-selection");
+
+  if (form) {
+    var input = form.querySelectorAll(".program-selection__input");
+
+    form.addEventListener("submit", function (evt) {
+      evt.preventDefault();
+      var valid = true;
+      for (var i = 0; i < input.length; i++) {
+        input[i].classList.remove("program-selection__input--error");
+        if (!input[i].value) {
+          input[i].offsetWidth = input[i].offsetWidth;
+          input[i].classList.add("program-selection__input--error");
+          valid = false;
+        }
+
+        input[i].addEventListener("change", function() {
+          this.classList.remove("program-selection__input--error");
+          if (!this.value) {
+            this.offsetWidth = this.offsetWidth;
+            this.classList.add("program-selection__input--error");
+          }
+        });
+      }
+      if (valid) {
+        form.submit();
+      } else {
+        window.scroll(0, getCoords(form.querySelector(".program-selection__input--error")).top - 20);
+      }
+    });
+
+    function getCoords(elem) {
+      var box = elem.getBoundingClientRect();
+      return {
+        top: box.top + pageYOffset,
+        left: box.left + pageXOffset
+      };
+
+    }
+  }
+
 }
