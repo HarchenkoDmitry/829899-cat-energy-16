@@ -215,6 +215,19 @@
     padding: 0;
     margin-top: 44px;
     margin-bottom: 0;
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+
+    &.webp {
+      background-image: url("../img/gift-photo-desktop@1x.webp");
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift-photo-desktop@2x.jpg");
+
+      &.webp {
+        background-image: url("../img/gift-photo-desktop@2x.webp");
+      }
+    }
   }
 
   .additional-goods__promo-text {

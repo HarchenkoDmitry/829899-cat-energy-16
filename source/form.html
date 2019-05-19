@@ -34,10 +34,67 @@
 
       <h1 class="visually-hidden">Cat Energy - Питание для котов</h1>
 
-      <section class="program-selection container">
-        <h2 class="general-heading">Подбор программы</h2>
+      <form class="program-selection container">
+        <h2 class="program-selection__heading general-heading">Подбор программы</h2>
         <p class="program-selection__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
-      </section>
+
+        <div class="program-selection__wrap-data">
+          <div class="program-selection__cat-data">
+            <label class="program-selection__label">
+              Имя:*
+              <input type="text" class="program-selection__input program-selection__input--error">
+            </label>
+            <label class="program-selection__label">
+              Вес&nbsp;(кг):*
+              <input type="number" class="program-selection__input">
+            </label>
+            <label class="program-selection__label">
+              Возраст&nbsp;(лет):
+              <input type="number" class="program-selection__input">
+            </label>
+          </div>
+
+          <div class="program-selection__nutrition-program">
+            <input type="radio" class="program-selection__radio" id="slim" name="nutrition-program"><label class="program-selection__label" for="slim">Похудение</label>
+            <input type="radio" class="program-selection__radio"  id="pro" name="nutrition-program"><label class="program-selection__label" for="pro">Набор массы</label>
+            <input type="radio" class="program-selection__radio"  id="dont-know" name="nutrition-program"><label class="program-selection__label" for="dont-know">Не знаю (Нужен ваш совет)</label>
+          </div>
+        </div>
+
+        <h2 class="program-selection__second-heading stylized-heading">Контактные данные (владельца кота)</h2>
+        <div class="program-selection__wrap-data">
+          <label class="program-selection__label">
+            E&#8209;mail:*
+            <input type="email" class="program-selection__input program-selection__input--error" placeholder="kuklachev@gmail.com">
+            <svg class="program-selection__input-img" width="17" height="13">
+              <use xlink:href="#icon-mail">
+            </svg>
+          </label>
+          <label class="program-selection__label">
+            Телефон:*
+            <input type="tel" class="program-selection__input" placeholder="8 (960) 900-60-90">
+            <svg class="program-selection__input-img" width="20" height="20">
+              <use xlink:href="#icon-phone">
+            </svg>
+          </label>
+        </div>
+
+        <h2 class="program-selection__second-heading stylized-heading">Комментарий</h2>
+        <textarea class="program-selection__textarea" name="habit" placeholder="Расскажите обо всех повадках кота"></textarea>
+
+        <h2 class="program-selection__second-heading stylized-heading">Дополнительно</h2>
+        <section class="program-selection__additionally">
+          <h3 class="visually-hidden">Дополнительно</h3>
+          <input type="checkbox" class="program-selection__checkbox" name="sugar-substitute" id="sugar-substitute"><label class="program-selection__label" for="sugar-substitute">Сахарозаменитель</label>
+          <input type="checkbox" class="program-selection__checkbox" name="water" id="water"><label class="program-selection__label" for="water">Питьевая вода</label>
+          <input type="checkbox" class="program-selection__checkbox" name="milk" id="milk"><label class="program-selection__label" for="milk">Молоко</label>
+          <input type="checkbox" class="program-selection__checkbox" name="vitamin" id="vitamin"><label class="program-selection__label" for="vitamin">Витамины</label>
+        </section>
+
+        <button type="submit" class="program-selection__button button">Отправить заявку</button>
+
+        <p class="program-selection__explanation">* — Обязательные поля</p>
+      </form>
 
       <section class="map map--grey">
         <div class="map__wrap-text container">
