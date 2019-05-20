@@ -38,6 +38,13 @@
   vertical-align: bottom;
 }
 
+@media (min-resolution: 2dppx) {
+  .promo {
+    background: no-repeat top left / 320px url("../img/index-background-mobile@2x.jpg"),
+      linear-gradient(to bottom, #63a73a 305px, #ffffff 305px);
+  }
+}
+
 @media (min-width: @tablet-width) {
   .promo {
     background: none;
@@ -104,9 +111,16 @@
       width: calc(50% + 1px);
       height: 100%;
       background-image: url("../img/index-background-desktop@1x.jpg"),
-      linear-gradient(to bottom, #63a73a 305px, #ffffff 305px);
+      linear-gradient(to bottom, #64a93c 696px, #ffffff 696px);
       background-repeat: no-repeat;
-      background-position: top left;
+      background-position: top right;
+    }
+  }
+
+  @media (min-resolution: 2dppx) {
+    .promo::after {
+      background: no-repeat top right / 720px url("../img/index-background-desktop@2x.jpg"),
+        linear-gradient(to bottom, #64a93c 696px, #ffffff 696px);
     }
   }
 
