@@ -1,28 +1,54 @@
 .stylized-heading {
   font-family: @font;
+  color: #111111;
   font-size: 24px;
   font-weight: normal;
   position: relative;
   display: inline-block;
-  margin-top: 26px;
-  margin-bottom: 31px;
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    top: 17px;
-    display: block;
-    width: 100vw;
-    height: 3px;
-    background-color: @color-green;
-  }
+  padding: 0 23px;
+  margin-left: -24px;
+  margin-top: 29px;
+  margin-bottom: 34px;
+  background-color: #ffffff;
+  line-height: 1;
 
   &::before {
-    left: calc(100% + 22px);
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 4px;
+    width: 100vw;
+    display: block;
+    height: 3px;
+    background-color: @color-green;
+    z-index: -1;
   }
+}
 
-  &::after {
-    right: calc(100% + 22px);
+@media (min-width: @tablet-width) {
+  .stylized-heading {
+    font-size: 36px;
+    margin-top: 27px;
+    margin-bottom: 36px;
+    margin-left: -2px;
+    padding-left: 39px;
+    padding-right: 36px;
+
+    &::before {
+      left: -28px;
+      top: 22px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .stylized-heading {
+    margin-left: -40px;
+    margin-top: 36px;
+    margin-bottom: 36px;
+
+    &::before {
+      left: calc((-100vw + 1300px) / 2);
+    }
   }
 }

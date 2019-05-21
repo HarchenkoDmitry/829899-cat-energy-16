@@ -2,11 +2,13 @@
   position: relative;
   z-index: 1;
   display: flex;
-  padding: 12px 19px;
+  padding: 0 19px;
+  padding-top: 12px;
+  padding-bottom: 10px;
   background-color: #ffffff;
 }
 
-.map__wrap-text--grey {
+.map--grey .map__wrap-text {
   background-color: #f2f2f2;
 }
 
@@ -16,6 +18,8 @@
   font-weight: normal;
   width: 50%;
   text-transform: uppercase;
+  padding-right: 15px;
+  box-sizing: border-box;
 }
 
 .map__text {
@@ -27,7 +31,74 @@
 }
 
 .map__img {
-  width: 100%;
+  width: 320px;
+  margin: auto;
+  display: block;
   margin-top: -39px;
   vertical-align: bottom;
+}
+
+@media (min-width: @tablet-width) {
+  .map__wrap-text {
+    padding: 0 71px;
+    padding-top: 46px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 37px;
+  }
+
+  .map__heading {
+    font-size: 20px;
+    line-height: 1.25;
+    width: 200px;
+    margin-bottom: 18px;
+  }
+
+  .map__text {
+    text-align: right;
+    font-size: 16px;
+    width: 169px;
+    line-height: 1.25;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .map__img {
+    margin-top: 0;
+    width: 768px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .map {
+    position: relative;
+
+    &--grey {
+      background: none;
+
+      .map__wrap-text {
+        background-color: #ffffff;
+      }
+    }
+  }
+
+  .map__wrap-text {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    width: 570px;
+    height: 201px;
+    padding: 46px 76px;
+  }
+
+  .map__text {
+    text-align: left;
+  }
+
+  .map__img {
+    margin-top: 0;
+    width: 1440px;
+  }
 }
