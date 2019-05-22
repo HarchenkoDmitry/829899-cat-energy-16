@@ -9,6 +9,8 @@ window.onload = function() {
   }
 
   validationForm();
+
+  initializationMap();
 }
 
 function initializationMenu() {
@@ -142,5 +144,12 @@ function validationForm() {
 
     }
   }
+}
 
+function initializationMap() {
+  var mapImg = document.querySelector(".map__img");
+  var mapFrame = document.querySelector(".map__frame");
+
+  mapImg.classList.remove("map__img--no-js");
+  mapFrame.classList.remove("map__frame--no-js");
 }

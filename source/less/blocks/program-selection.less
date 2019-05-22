@@ -84,6 +84,15 @@
 .program-selection__input {
   margin-left: 13px;
   min-width: 0;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  &[type='number'] {
+    -moz-appearance: textfield;
+  }
 }
 
 .program-selection__input-img {
@@ -102,6 +111,7 @@
   min-height: 150px;
   margin-top: 1px;
   margin-bottom: 10px;
+  overflow: hidden;
 
   &:focus {
     padding-top: 12px;

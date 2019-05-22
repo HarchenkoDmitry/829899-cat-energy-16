@@ -36,6 +36,21 @@
   display: block;
   margin-top: -39px;
   vertical-align: bottom;
+  display: none;
+
+  &--no-js {
+    display: block;
+  }
+}
+
+.map__frame {
+  width: 100%;
+  vertical-align: middle;
+  height: 362px;
+
+  &--no-js {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -68,6 +83,10 @@
   .map__img {
     margin-top: 0;
     width: 768px;
+  }
+
+  .map__frame {
+    height: 400px;
   }
 }
 
